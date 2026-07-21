@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../src/components/layouts/navbar/Navbar";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-8xl text-yellow-700'>Welcome</h1>
+      <Navbar />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
