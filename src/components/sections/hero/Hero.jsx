@@ -5,8 +5,8 @@ import HeroImage from "./HeroImage";
 
 const Hero = () => {
   return (
-    <section>
-      <Container>
+    <section className="py-20 lg:py-28">
+      <Container className="grid lg:grid-cols-2 gap-16 items-center">
         <HeroContent />
         <HeroImage />
       </Container>
