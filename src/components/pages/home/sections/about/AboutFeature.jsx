@@ -1,5 +1,5 @@
 import React from "react";
-import aboutFeature from "../../../data/aboutFeature";
+import aboutFeature from "../../../../../data/aboutFeature";
 
 const AboutFeature = () => {
   return (

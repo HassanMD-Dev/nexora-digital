@@ -1,7 +1,7 @@
 import React from "react";
 import AboutFeature from "./AboutFeature";
 import AboutStats from "./AboutStats";
-import Button from "../../ui/Button";
+import Button from "../../../../ui/Button";
 import { ArrowRight } from "lucide-react";
 
 const AboutContent = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../../ui/Container";
+import Container from "../../../../ui/Container";
 import AboutContent from "./AboutContent";
 import AboutImage from "./AboutImage";
 

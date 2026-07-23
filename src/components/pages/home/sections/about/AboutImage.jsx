@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImage from "../../../assets/images/aboutImage.svg";
+import aboutImage from "../../../../../assets/images/aboutImage.svg";
 import { BadgeCheck, TrendingUp } from "lucide-react";
 
 const AboutImage = () => {
