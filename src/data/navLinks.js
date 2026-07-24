@@ -21,6 +21,11 @@ const navLinks = [
   },
   {
     id: 5,
+    name: "Pricing",
+    path: "/pricing",
+  },
+  {
+    id: 6,
     name: "Contact",
     path: "/contact",
   },

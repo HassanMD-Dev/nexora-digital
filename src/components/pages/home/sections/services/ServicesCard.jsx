@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const ServicesCard = ({ service }) => {
   const { icon: Icon, title, description } = service;
   return (
-    <div className="flex h-full flex-col rounded-3xl border bg-background p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary/20">
+    <div className="flex h-full flex-col rounded-3xl border border-border bg-background p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-primary">
       <div className="h-14 w-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
         <Icon className="h-7 w-7" />
       </div>
