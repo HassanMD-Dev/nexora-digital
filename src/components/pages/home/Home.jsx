@@ -5,6 +5,8 @@ import Services from "./sections/services/Services";
 import Projects from "./sections/projects/Projects";
 import WhyChoose from "./sections/whyChoose/WhyChoose";
 import Testimonial from "./sections/testimonials/Testimonial";
+import CTA from "./sections/cta/CTA";
+import Contact from "./sections/contact/Contact";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Projects />
       <WhyChoose />
       <Testimonial />
+      <CTA />
+      <Contact />
     </div>
   );
 };
