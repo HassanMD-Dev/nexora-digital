@@ -4,6 +4,7 @@ import Logo from "../navbar/Logo";
 import FooterLinks from "./FooterLinks";
 import { quickLinks, services } from "../../../data/footerData";
 import FooterSocial from "./FooterSocial";
+import FooterBottom from "./FooterBottom";
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-20 lg:py-28">
@@ -26,6 +27,7 @@ const Footer = () => {
             <FooterSocial />
           </div>
         </div>
+        <FooterBottom />
       </Container>
     </footer>
   );
