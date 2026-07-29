@@ -4,23 +4,24 @@ import Button from "../../../../ui/Button";
 const HeroContent = () => {
   return (
     <div className="flex flex-col items-center lg:items-start gap-6">
-      <span className="rounded-full border border-primary/20 bg-primary/10 py-2 px-4 text-sm font-medium tracking-wide text-primary">
-        Our Services
+      <span className="rounded-full border w-fit border-primary/20 bg-primary/10 py-2 px-4 text-sm font-medium tracking-wide text-primary">
+        About Us
       </span>
       <h1 className="text-4xl lg:text-6xl text-center lg:text-start max-w-2xl font-bold text-foreground">
-        Digital Solutions That Help Your Business Grow
+        Passionate About Building Modern Digital Experiences
       </h1>
       <p className="text-lg leading-relaxed text-center lg:text-start text-muted max-w-xl">
-        From modern web development to responsive design and performance
-        optimization, we create digital experiences that help businesses stand
-        out and achieve measurable results.
+        We are a digital agency dedicated to creating fast, responsive, and
+        user-focused websites. By combining thoughtful design with clean
+        development, we help businesses establish a strong online presence and
+        achieve long-term growth.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 mt-2">
+      <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
         <Button variant="primary" size="md">
-          Explore Services
+          Our Services
         </Button>
         <Button variant="outline" size="md">
-          Get a Free Quote
+          Let's Talk
         </Button>
       </div>
     </div>
