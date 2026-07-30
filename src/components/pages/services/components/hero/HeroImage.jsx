@@ -8,7 +8,7 @@ const HeroImage = () => {
         <img
           src={heroImg}
           alt="service image"
-          className="w-full h-auto object-contain drop-shadow-2xl"
+          className="w-full h-auto object-contain drop-shadow-2xl transition-all duration-500 hover:scale-105"
         />
       </div>
     </div>
