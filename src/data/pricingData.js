@@ -31,7 +31,7 @@ const pricingData = [
       "Performance Optimization",
       "30 Days Support",
     ],
-    buttonText: "Choose Plan",
+    buttonText: "Get Started",
     popular: true,
   },
   {
