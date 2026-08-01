@@ -5,19 +5,13 @@ const FAQAccordion = ({ faq, activeId, setActiveId }) => {
   const { id, question, answer } = faq;
   const Icon = ChevronDown;
   id === activeId;
-  const handleClick = () => {
-    if (id === activeId) {
-      setActiveId(null);
-    } else {
-      setActiveId(id);
-    }
-  };
+
   return (
     <div
       className={`rounded-2xl border overflow-hidden transition-all duration-500 hover:shadow-lg ${id === activeId ? "border-primary bg-primary/5 shadow-lg" : "border-border bg-background"}`}
     >
       <div
-        onClick={handleClick}
+        onClick={() => (id === activeId ? setActiveId(null) : setActiveId(id))}
         className="flex items-center justify-between cursor-pointer p-6"
       >
         <h2 className="text-lg font-semibold text-foreground">{question}</h2>
@@ -28,11 +22,11 @@ const FAQAccordion = ({ faq, activeId, setActiveId }) => {
       {id === activeId && (
         <div
           className={`
-    overflow-hidden
-    transition-all
-    duration-300
-    ease-in-out
-    ${id === activeId ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+            overflow-hidden
+            transition-all
+            duration-300
+            ease-in-out
+             ${id === activeId ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
   `}
         >
           <p className="px-6 pb-6 pt-0 leading-6 text-muted text-base">

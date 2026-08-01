@@ -11,7 +11,7 @@ const PricingCard = ({ pricing }) => {
       className={`${popular === true ? "border-primary border-2 bg-primary/5 shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.25)] scale-[1.03]" : ""} group rounded-3xl relative flex flex-col h-full border bg-background p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
     >
       {popular === true ? (
-        <span className="absolute -top-3 left-53 lg:-top-7 lg:left-34 rounded-full bg-primary text-white px-4 py-2 text-xs font-semibold">
+        <span className="absolute -top-3 left-28 lg:-top-7 lg:left-34 rounded-full bg-primary text-white px-4 py-2 text-xs font-semibold">
           Most Popular
         </span>
       ) : (

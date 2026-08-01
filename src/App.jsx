@@ -6,6 +6,7 @@ import Footer from "./components/layouts/footer/Footer";
 import Services from "./components/pages/services/Services";
 import About from "./components/pages/about/About";
 import Pricing from "./components/pages/pricing/Pricing";
+import Projects from "./components/pages/projects/Projects";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </div>
