@@ -7,10 +7,13 @@ import Services from "./components/pages/services/Services";
 import About from "./components/pages/about/About";
 import Pricing from "./components/pages/pricing/Pricing";
 import Projects from "./components/pages/projects/Projects";
+import Contact from "./components/pages/contact/Contact";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <div>
+      <Toaster />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +21,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
