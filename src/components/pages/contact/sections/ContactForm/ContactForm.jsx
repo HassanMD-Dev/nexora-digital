@@ -4,6 +4,7 @@ import SectionHeading from "../../../../ui/SectionHeading";
 import ContactFormFields from "./ContactFormFields";
 import toast from "react-hot-toast";
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,7 +15,7 @@ const ContactForm = () => {
   });
 
   const { firstName, lastName, email, phone, service, message } = formData;
-
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const handleChange = (e) => {
     const { value, name } = e.target;
     setFormData((prev) => ({
@@ -34,16 +35,25 @@ const ContactForm = () => {
     ) {
       return toast.error("Please fill all fields");
     }
-    toast.success("Message Submitted Successfully.");
-    console.log(formData);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+
+    if (!emailRegex.test(email)) {
+      return toast.error("Please enter a valid email address.");
+    }
+
+    setIsSubmitting(true);
+    setTimeout(() => {
+      toast.success("Message Submitted Successfully.");
+      console.log(formData);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+      setIsSubmitting(false);
+    }, 2000);
   };
   return (
     <section className="py-20 lg:py-28 bg-muted/20">
@@ -58,6 +68,7 @@ const ContactForm = () => {
             formData={formData}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            isSubmitting={isSubmitting}
           />
         </div>
       </Container>

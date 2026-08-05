@@ -9,6 +9,7 @@ import Pricing from "./components/pages/pricing/Pricing";
 import Projects from "./components/pages/projects/Projects";
 import Contact from "./components/pages/contact/Contact";
 import { Toaster } from "react-hot-toast";
+import NotFound from "./components/pages/NotFound/NotFound";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

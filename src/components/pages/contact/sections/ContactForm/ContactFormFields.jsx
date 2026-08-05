@@ -6,6 +6,7 @@ const ContactFormFields = ({
   setFormData,
   handleChange,
   handleSubmit,
+  isSubmitting,
 }) => {
   return (
     <form
@@ -110,7 +111,7 @@ const ContactFormFields = ({
         ></textarea>
       </div>
       <div className="md:col-span-2 mt-8">
-        <SubmitButton />
+        <SubmitButton isSubmitting={isSubmitting} />
       </div>
     </form>
   );

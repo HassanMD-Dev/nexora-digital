@@ -1,10 +1,15 @@
 import React from "react";
 import Button from "../../../../ui/Button";
 
-const SubmitButton = ({ handleSubmit }) => {
+const SubmitButton = ({ isSubmitting }) => {
   return (
-    <Button variant="primary" size="lg" className="w-full sm:w-fit">
-      Send Message
+    <Button
+      type="submit"
+      variant="primary"
+      size="lg"
+      className="w-full sm:w-fit"
+    >
+      {isSubmitting ? "Sending..." : "Send Message"}
     </Button>
   );
 };

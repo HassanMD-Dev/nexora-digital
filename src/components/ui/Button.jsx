@@ -26,7 +26,7 @@ const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`rounded-xl font-semibold transition-all duration-300 ${variantStyles} ${sizeStyles} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-300 ${variantStyles} ${sizeStyles} ${className}`}
     >
       {children}
     </button>
