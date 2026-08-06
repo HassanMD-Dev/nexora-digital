@@ -1,11 +1,11 @@
 import { Quote, Star } from "lucide-react";
 import React from "react";
 
-const TestimonialCard = ({ testimoinal }) => {
-  const { review, image, rating, role, name } = testimoinal;
+const TestimonialCard = ({ testimonial }) => {
+  const { review, image, rating, role, name } = testimonial;
 
   return (
-    <div className="group flex flex-col h-full rounded-3xl border border-border bg-background p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl">
+    <div className="group flex flex-col h-full w-full rounded-3xl border border-border bg-background p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl">
       <Quote className="h-8 w-8 shrink-0 mt-1 mb-4 text-primary" />
       <div className="flex items-center gap-1 mb-6">
         {Array.from({ length: rating }, (_, index) => {
@@ -18,7 +18,7 @@ const TestimonialCard = ({ testimoinal }) => {
         })}
       </div>
       <div className="flex-1">
-        <p className="flex items-start leading-relaxed text-muted gap-2 italic mb-8">
+        <p className="flex items-start line-clamp-4 leading-relaxed text-muted gap-2 italic mb-8">
           {review}
         </p>
       </div>

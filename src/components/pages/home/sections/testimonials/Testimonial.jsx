@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../../../ui/Container";
 import SectionHeading from "../../../../ui/SectionHeading";
-import TestimonialGrid from "./TestimonialGrid";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 const Testimonial = () => {
   return (
@@ -15,7 +15,7 @@ const Testimonial = () => {
           }
         />
         <div className="mt-16">
-          <TestimonialGrid />
+          <TestimonialCarousel />
         </div>
       </Container>
     </section>

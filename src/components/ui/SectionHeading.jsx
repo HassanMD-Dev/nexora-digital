@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { fadeUp } from "../../animations/variants";
 
 const SectionHeading = ({ title, badge, description }) => {
   return (
-    <div className="flex flex-col">
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="flex flex-col"
+    >
       <div className="mb-5">
         <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-medium tracking-wide text-primary">
           {badge}
@@ -14,7 +22,7 @@ const SectionHeading = ({ title, badge, description }) => {
       </h2>
 
       <p className="max-w-2xl leading-relaxed text-muted">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
