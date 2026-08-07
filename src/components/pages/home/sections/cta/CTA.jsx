@@ -2,13 +2,28 @@ import React from "react";
 import Container from "../../../../ui/Container";
 import Button from "../../../../ui/Button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  heroStagger,
+  fadeLeft,
+  fadeRight,
+} from "../../../../../animations/variants";
 
 const CTA = () => {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 p-10 lg:p-16 shadow-xl flex flex-col lg:flex-row justify-between items-center gap-10">
-          <div className="max-w-2xl flex flex-col gap-4">
+        <motion.div
+          variants={heroStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 p-10 lg:p-16 shadow-xl flex flex-col lg:flex-row justify-between items-center gap-10"
+        >
+          <motion.div
+            variants={fadeLeft}
+            className="max-w-2xl flex flex-col gap-4"
+          >
             <h3 className="text-3xl lg:text-5xl font-bold text-white">
               Ready to Grow Your Business?
             </h3>
@@ -17,8 +32,8 @@ const CTA = () => {
               modern websites to complete digital solutions, we're here to help
               your business succeed.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeRight}>
             <Button
               className="group inline-flex items-center gap-2 border-white text-white hover:bg-background hover:text-blue-600"
               variant="outline"
@@ -27,8 +42,8 @@ const CTA = () => {
               Get Started
               <ArrowRight className="h-5 w-5 transition-all duration-300 group-hover:translate-x-1" />
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Container>
     </section>
   );

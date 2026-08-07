@@ -3,10 +3,15 @@ import AboutFeature from "./AboutFeature";
 import AboutStats from "./AboutStats";
 import Button from "../../../../ui/Button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeRight } from "../../../../../animations/variants";
 
 const AboutContent = () => {
   return (
-    <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+    <motion.div
+      variants={fadeRight}
+      className="flex flex-col items-center text-center lg:items-start lg:text-left"
+    >
       <div className="mb-4">
         <p className="rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm font-medium tracking-wide text-primary">
           About Us
@@ -33,11 +38,7 @@ const AboutContent = () => {
           Learn More <ArrowRight size={18} />
         </Button>
       </div>
-      {/* <div className="mb-10 mt-10 border-t border-border pt-8">
-        <AboutStats />
-      </div> */}
-      <div className="w-full"></div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,7 @@
 import React from "react";
 import aboutFeature from "../../../../../data/aboutFeature";
+import { motion } from "framer-motion";
+import { heroStagger, fadeUp } from "../../../../../animations/variants";
 
 const AboutFeature = () => {
   return (
@@ -10,7 +12,9 @@ const AboutFeature = () => {
         return (
           <div className="flex items-center gap-3" key={feature.id}>
             <Icon className="h-6 w-6 text-primary flex-shrink-0" />
-            <h3 className="font-body font-medium text-foreground">{feature.title}</h3>
+            <h3 className="font-body font-medium text-foreground">
+              {feature.title}
+            </h3>
           </div>
         );
       })}

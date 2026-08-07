@@ -5,29 +5,46 @@ import FooterLinks from "./FooterLinks";
 import { quickLinks, services } from "../../../data/footerData";
 import FooterSocial from "./FooterSocial";
 import FooterBottom from "./FooterBottom";
+import { motion } from "framer-motion";
+import { heroStagger, fadeUp } from "../../../animations/variants";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-20 lg:py-28">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div>
+        <motion.div
+          variants={heroStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+        >
+          <motion.div variants={fadeUp}>
             <Logo />
             <p className="text-white/70 mt-2 leading-relaxed max-w-sm">
               We create modern websites and digital experiences that help
               businesses grow through clean design, performance, and strategy.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <FooterLinks links={quickLinks} title={"Quick Links"} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <FooterLinks links={services} title={"Services"} />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <FooterSocial />
-          </div>
-        </div>
-        <FooterBottom />
+          </motion.div>
+        </motion.div>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ delay: 0.4 }}
+        >
+          <FooterBottom />
+        </motion.div>
       </Container>
     </footer>
   );

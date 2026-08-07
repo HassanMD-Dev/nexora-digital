@@ -1,10 +1,15 @@
 import React from "react";
 import Button from "../../../../ui/Button";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeRight } from "../../../../../animations/variants";
 
 const ContactForm = () => {
   return (
-    <div className="w-full rounded-3xl border border-border bg-background p-8 shadow-lg">
+    <motion.div
+      variants={fadeRight}
+      className="w-full rounded-3xl border border-border bg-background p-8 shadow-lg"
+    >
       <div className="mb-8">
         <h3 className="text-2xl font-bold text-foreground">
           Send Us a Message
@@ -84,7 +89,7 @@ const ContactForm = () => {
           <ArrowRight className="h-6 w-6 transition-all duration-300 group-hover:translate-x-1" />
         </Button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

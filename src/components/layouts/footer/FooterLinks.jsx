@@ -8,7 +8,7 @@ const FooterLinks = ({ links, title }) => {
       {links.map((link) => (
         <NavLink
           key={link.id}
-          className="text-white/70 transition-all duration-300 hover:text-white hover:translate-x-1"
+          className="text-white/70 transition-all duration-300 hover:text-primary hover:translate-x-1"
           to={link.href}
         >
           {link.title}
