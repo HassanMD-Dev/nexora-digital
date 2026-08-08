@@ -7,7 +7,7 @@ export const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.7,
       ease: "easeOut",
     },
   },
@@ -73,7 +73,7 @@ export const cardStagger = {
   visible: {
     transition: {
       delayChildren: 0.1,
-      staggerChildren: 0.4,
+      staggerChildren: 0.3,
     },
   },
 };

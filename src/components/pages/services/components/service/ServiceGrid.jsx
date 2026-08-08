@@ -1,15 +1,25 @@
-import React from 'react'
+import React from "react";
 import servicePSData from "../../../../../data/servicesPSData";
-import ServiceCard from './ServiceCard';
+import ServiceCard from "./ServiceCard";
+import { motion } from "framer-motion";
+import { cardStagger, fadeUp } from "../../../../../animations/variants";
 
 const ServiceGrid = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16'>
+    <motion.div
+      variants={cardStagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
+    >
       {servicePSData.map((service) => (
-        <ServiceCard key={service.id} service={service} />
+        <motion.div key={service.id} variants={fadeUp}>
+          <ServiceCard service={service} />
+        </motion.div>
       ))}
-    </div>
-  )
-}
+    </motion.div>
+  );
+};
 
-export default ServiceGrid
+export default ServiceGrid;

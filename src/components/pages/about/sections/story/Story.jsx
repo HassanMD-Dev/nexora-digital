@@ -3,6 +3,9 @@ import Container from "../../../../ui/Container";
 import SectionHeading from "../../../../ui/SectionHeading";
 import StoryContent from "./StoryContent";
 import StoryImage from "./StoryImage";
+import { motion } from "framer-motion";
+import { heroStagger } from "../../../../../animations/variants";
+
 const Story = () => {
   return (
     <section className="py-20 lg:py-28 bg-background">
@@ -14,7 +17,14 @@ const Story = () => {
         />
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <StoryImage />
-          <StoryContent />
+          <motion.div
+            variants={heroStagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <StoryContent />
+          </motion.div>
         </div>
       </Container>
     </section>

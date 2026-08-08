@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImg from "../../../../../assets/images/AbtHeroImg.svg";
+
 const HeroImage = () => {
   return (
     <div className="flex-1 flex items-center justify-center">
